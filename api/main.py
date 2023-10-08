@@ -12,11 +12,6 @@ app = FastAPI()
 model = ReadabilityEvaluationModel()
 
 
-@app.on_event("startup")
-async def load_model():
-    model.load_model()
-
-
 @app.post("/")
 async def evaluate_readability(excerpt: Excerpt) -> dict:
     text = excerpt.text
