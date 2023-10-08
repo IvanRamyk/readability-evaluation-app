@@ -28,7 +28,7 @@ API is implemented using FastAPI framework.
 Steps to run the API server:
 1. Run the following command (dependencies should be installed from the previous step)
 ```bash
-uvicorn api:app --reload
+uvicorn api.main:app --reload  
 ``` 
 
 2. Check API endpoint using the following `curl` command:
